@@ -74,9 +74,9 @@ export default function AboutPage() {
                     >
                       Together AI
                     </a>
-                    , building infrastructure and tooling for fine-tuning,
-                    reinforcement learning, evaluation, quantization, and
-                    distillation of open-source LLMs at scale
+                    , building infrastructure and platform tooling for
+                    fine-tuning, RL, evaluation, quantization, and distillation
+                    of open-source LLMs at scale
                   </li>
                   <li>
                     Studied{" "}
