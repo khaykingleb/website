@@ -57,8 +57,9 @@ export default function AboutPage() {
               <div className="mt-2 space-y-1 text-base text-pretty">
                 <ul className="list-disc space-y-1 space-x-0 pl-4">
                   <li>
-                    ML platform engineer working on large-scale ML systems,
-                    infrastructure, and DevOps
+                    ML infrastructure and platform engineer specializing in
+                    large-scale distributed systems for training and inference,
+                    MLOps, and DevOps
                   </li>
                   <li>
                     Currently on the Model Shaping team at{" "}
@@ -71,11 +72,11 @@ export default function AboutPage() {
                         hover:underline hover:opacity-80
                       `}
                     >
-                      Together.ai
+                      Together AI
                     </a>
                     , building infrastructure and tooling for fine-tuning,
                     reinforcement learning, evaluation, quantization, and
-                    distillation of open-source LLMs
+                    distillation of open-source LLMs at scale
                   </li>
                   <li>
                     Studied{" "}
@@ -112,11 +113,9 @@ export default function AboutPage() {
                         hover:underline hover:opacity-80
                       `}
                     >
-                      National Research University &quot;Higher School of
-                      Economics&quot;
-                    </a>{" "}
-                    which equips me with a comprehensive understanding of both
-                    the business and technical aspects of projects
+                      HSE University
+                    </a>
+                    , combining technical depth with business perspective
                   </li>
                   <li>
                     Passed{" "}
@@ -131,9 +130,8 @@ export default function AboutPage() {
                     >
                       CFA Level 1
                     </a>{" "}
-                    in my third year of undergrad; still keen on investing and
-                    portfolio management, so I may complete the remaining levels
-                    someday
+                    during undergrad; maintain interest in quantitative finance
+                    and portfolio management
                   </li>
                 </ul>
               </div>
