@@ -1,8 +1,8 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import jsdocPlugin from "eslint-plugin-jsdoc";
 import simpleImportSortPlugin from "eslint-plugin-simple-import-sort";
 import tsdocPlugin from "eslint-plugin-tsdoc";
-import jsdocPlugin from "eslint-plugin-jsdoc";
 // import betterTailwindcssPlugin from "eslint-plugin-better-tailwindcss";
 
 const compat = new FlatCompat({
@@ -11,6 +11,7 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  { ignores: ["vendor/**", ".next/**"] },
   ...compat.extends(
     "next/core-web-vitals",
     "next/typescript",
@@ -37,6 +38,7 @@ const eslintConfig = [
       },
     },
     rules: {
+      "import/no-unresolved": ["error", { ignore: ["^react-notion-x"] }],
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
       "react/react-in-jsx-scope": "off",
@@ -60,6 +62,13 @@ const eslintConfig = [
         },
       ],
       "jsdoc/require-returns": "warn",
+    },
+  },
+  {
+    files: ["*.config.{js,ts,mjs}"],
+    rules: {
+      "import/no-anonymous-default-export": "off",
+      "tsdoc/syntax": "off",
     },
   },
 ];

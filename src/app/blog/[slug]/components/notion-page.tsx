@@ -1,9 +1,12 @@
 import { unstable_cache } from "next/cache";
 import { NotionAPI } from "notion-client";
-import type { ExtendedRecordMap } from "notion-types";
-import { getPageTableOfContents } from "notion-utils";
+import { getBlockValue, getPageTableOfContents } from "notion-utils";
+import type { ComponentProps } from "react";
+import { NotionRenderer } from "react-notion-x";
 
 import NotionRendererClient from "@/app/blog/[slug]/components/notion-renderer";
+
+type RecordMap = ComponentProps<typeof NotionRenderer>["recordMap"];
 
 /**
  * Converts text to a URL-friendly slug.
@@ -25,30 +28,8 @@ const slugify = (text: string) =>
  * @param pageId - The ID of the Notion page.
  * @returns The Notion page record map.
  */
-async function fetchNotionPage(pageId: string): Promise<ExtendedRecordMap> {
-  const notion = new NotionAPI({
-    // Hotfix: https://github.com/NotionX/react-notion-x/issues/659
-    // Thanks Notion for breaking changes :)
-    kyOptions: {
-      hooks: {
-        beforeRequest: [
-          (request, options) => {
-            const url = request.url.toString();
-            if (url.includes("/api/v3/syncRecordValues")) {
-              return new Request(
-                url.replace(
-                  "/api/v3/syncRecordValues",
-                  "/api/v3/syncRecordValuesMain",
-                ),
-                options,
-              );
-            }
-            return request;
-          },
-        ],
-      },
-    },
-  });
+async function fetchNotionPage(pageId: string) {
+  const notion = new NotionAPI();
   return notion.getPage(pageId);
 }
 
@@ -63,10 +44,10 @@ const getNotionPage = unstable_cache(fetchNotionPage, ["notionPage"], {
  * @returns A mapping from block IDs (with and without dashes) to header slugs.
  */
 function buildHeaderSlugMap(
-  recordMap: ExtendedRecordMap,
+  recordMap: Awaited<ReturnType<NotionAPI["getPage"]>>,
 ): Record<string, string> {
   const pageId = Object.keys(recordMap.block)[0];
-  const pageBlock = recordMap.block[pageId]?.value;
+  const pageBlock = getBlockValue(recordMap.block[pageId]);
 
   if (!pageBlock || pageBlock.type !== "page") {
     return {};
@@ -97,7 +78,7 @@ export default async function NotionPage({ page_id }: { page_id: string }) {
 
   return (
     <NotionRendererClient
-      recordMap={recordMap}
+      recordMap={recordMap as unknown as RecordMap}
       headerSlugMap={buildHeaderSlugMap(recordMap)}
     />
   );
