@@ -49,26 +49,7 @@ async function fetchNotionPage(pageId: string): Promise<ExtendedRecordMap> {
       },
     },
   });
-  const recordMap = await notion.getPage(pageId);
-
-  // Hotfix: Notion API now returns doubly-nested value structures
-  // e.g. { role, value: { role, value: { id, type, ... } } }
-  // Ref: https://github.com/NotionX/react-notion-x/pull/703
-  // Thanks Notion for breaking changes :) x2
-  for (const key of ["block", "collection", "collection_view"] as const) {
-    const map = recordMap[key];
-    if (!map) continue;
-    for (const id of Object.keys(map)) {
-      const outer = map[id] as Record<string, unknown>;
-      const inner = outer?.value as Record<string, unknown> | undefined;
-      const nested = inner?.value as Record<string, unknown> | undefined;
-      if (nested && typeof nested === "object" && nested.id) {
-        outer.value = nested;
-      }
-    }
-  }
-
-  return recordMap;
+  return notion.getPage(pageId);
 }
 
 const getNotionPage = unstable_cache(fetchNotionPage, ["notionPage"], {
