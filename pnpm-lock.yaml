@@ -13,10 +13,10 @@ importers:
         version: 2.50.5
       '@vercel/analytics':
         specifier: ~1.5
-        version: 1.5.0(next@15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1))(react@19.0.1)
+        version: 1.5.0(next@15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4))(react@19.0.4)
       '@vercel/speed-insights':
         specifier: ~1.2
-        version: 1.2.0(next@15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1))(react@19.0.1)
+        version: 1.2.0(next@15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4))(react@19.0.4)
       canvas:
         specifier: ~3.1
         version: 3.1.2
@@ -25,10 +25,10 @@ importers:
         version: 0.16.25
       next:
         specifier: ~15.3
-        version: 15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1)
+        version: 15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4)
       next-themes:
         specifier: ~0.4
-        version: 0.4.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1)
+        version: 0.4.6(react-dom@19.0.4(react@19.0.4))(react@19.0.4)
       notion-client:
         specifier: ~7.1
         version: 7.1.6
@@ -37,13 +37,13 @@ importers:
         version: 1.30.0
       react:
         specifier: ~19.0
-        version: 19.0.1
+        version: 19.0.4
       react-dom:
         specifier: ~19.0
-        version: 19.0.1(react@19.0.1)
+        version: 19.0.4(react@19.0.4)
       react-icons:
         specifier: ~5.5
-        version: 5.5.0(react@19.0.1)
+        version: 5.5.0(react@19.0.4)
       react-notion-x:
         specifier: link:vendor/react-notion-x/packages/react-notion-x
         version: link:vendor/react-notion-x/packages/react-notion-x
@@ -336,8 +336,8 @@ packages:
   '@napi-rs/wasm-runtime@0.2.12':
     resolution: {integrity: sha512-ZVWUcfwY4E/yPitQJl481FjFo3K22D6qF0DuFH6Y/nbnE11GY5uguDxZMGXPQ8WQ0128MXQD7TnfHyK4oWoIJQ==}
 
-  '@next/env@15.3.6':
-    resolution: {integrity: sha512-/cK+QPcfRbDZxmI/uckT4lu9pHCfRIPBLqy88MhE+7Vg5hKrEYc333Ae76dn/cw2FBP2bR/GoK/4DU+U7by/Nw==}
+  '@next/env@15.3.9':
+    resolution: {integrity: sha512-I7wMCjlHc85EvAebNYJCRBZ+shdrGhcIXBviWmDzGYXwTQ+WrYpfg1LBOnTK1Bn3b+ud5apesNObXKEGqi/C3g==}
 
   '@next/eslint-plugin-next@15.3.6':
     resolution: {integrity: sha512-gvt7l1r4N0zHCXyXYj39ObrTBr8TxyA/306Z/kjseYk6hiefu3zexRKRVjVmQqUpxe9oxyfYWMZFtsBYPgr1oA==}
@@ -535,8 +535,8 @@ packages:
   '@types/node@20.17.58':
     resolution: {integrity: sha512-UvxetCgGwZ9HmsgGZ2tpStt6CiFU1bu28ftHWpDyfthsCt7OHXas0C7j0VgO3gBq8UHKI785wXmtcQVhLekcRg==}
 
-  '@types/phoenix@1.6.6':
-    resolution: {integrity: sha512-PIzZZlEppgrpoT2QgbnDU+MMzuR6BbCjllj0bM70lWoejMeNJAxCchxnv7J3XFkI8MpygtRpzXrIlmWUBclP5A==}
+  '@types/phoenix@1.6.7':
+    resolution: {integrity: sha512-oN9ive//QSBkf19rfDv45M7eZPi0eEXylht2OLEXicu5b4KoQ1OzXIw+xDSGWxSxe1JmepRR/ZH283vsu518/Q==}
 
   '@types/react-dom@19.0.6':
     resolution: {integrity: sha512-lo6MuY+rFr8kIiFnr+7TzO+Av0wUPcEcepiPV4epGP0eTQpkDfp9czudg73isV8UxKauCUNlL1N8fXhcnx4iBw==}
@@ -1512,8 +1512,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  ky@1.14.0:
-    resolution: {integrity: sha512-Rczb6FMM6JT0lvrOlP5WUOCB7s9XKxzwgErzhKlKde1bEV90FXplV1o87fpt4PU/asJFiqjYJxAJyzJhcrxOsQ==}
+  ky@1.14.3:
+    resolution: {integrity: sha512-9zy9lkjac+TR1c2tG+mkNSVlyOpInnWdSMiue4F+kq8TwJSgv6o8jhLRg8Ho6SnZ9wOYUq/yozts9qQCfk7bIw==}
     engines: {node: '>=18'}
 
   language-subtag-registry@0.3.23:
@@ -1672,8 +1672,8 @@ packages:
       react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
       react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
 
-  next@15.3.6:
-    resolution: {integrity: sha512-oI6D1zbbsh6JzzZFDCSHnnx6Qpvd1fSkVJu/5d8uluqnxzuoqtodVZjYvNovooznUq8udSAiKp7MbwlfZ8Gm6w==}
+  next@15.3.9:
+    resolution: {integrity: sha512-bat50ogkh2esjfkbqmVocL5QunR9RGCSO2oQKFjKeDcEylIgw3JY6CMfGnzoVfXJ9SDLHI546sHmsk90D2ivwQ==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
     hasBin: true
     peerDependencies:
@@ -1843,6 +1843,7 @@ packages:
   prebuild-install@7.1.3:
     resolution: {integrity: sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug==}
     engines: {node: '>=10'}
+    deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
   prelude-ls@1.2.1:
@@ -1875,10 +1876,10 @@ packages:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
 
-  react-dom@19.0.1:
-    resolution: {integrity: sha512-3TJg51HSbJiLVYCS6vWwWsyqoS36aGEOCmtLLHxROlSZZ5Bk10xpxHFbrCu4DdqgR85DDc9Vucxqhai3g2xjtA==}
+  react-dom@19.0.4:
+    resolution: {integrity: sha512-JiVlwQwuINIQf2+XUjtRFtLxhTE6hcyX7ZyCmY0HM7I/Kgi7qyXThkzwzg6uCfu3rTg9Ofe1x8qWYrfqthIrzg==}
     peerDependencies:
-      react: ^19.0.1
+      react: ^19.0.4
 
   react-icons@5.5.0:
     resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
@@ -1888,8 +1889,8 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react@19.0.1:
-    resolution: {integrity: sha512-nVRaZCuEyvu69sWrkdwjP6QY57C+lY+uMNNMyWUFJb9Z/JlaBOQus7mSMfGYsblv7R691u6SSJA/dX9IRnyyLQ==}
+  react@19.0.4:
+    resolution: {integrity: sha512-6RpEg9/n0sThnO+2CaMLWuvL1iyctm9/lcSTwvmyCoJYD5eiIrwxevXtrMqrtUr96HCdQB8/Yf+oK1QGy8kXEQ==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -2437,7 +2438,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@next/env@15.3.6': {}
+  '@next/env@15.3.9': {}
 
   '@next/eslint-plugin-next@15.3.6':
     dependencies:
@@ -2506,7 +2507,7 @@ snapshots:
   '@supabase/realtime-js@2.11.15':
     dependencies:
       '@supabase/node-fetch': 2.6.15
-      '@types/phoenix': 1.6.6
+      '@types/phoenix': 1.6.7
       '@types/ws': 8.18.1
       isows: 1.0.7(ws@8.18.3)
       ws: 8.18.3
@@ -2613,7 +2614,7 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
-  '@types/phoenix@1.6.6': {}
+  '@types/phoenix@1.6.7': {}
 
   '@types/react-dom@19.0.6(@types/react@19.0.14)':
     dependencies:
@@ -2778,15 +2779,15 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
-  '@vercel/analytics@1.5.0(next@15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1))(react@19.0.1)':
+  '@vercel/analytics@1.5.0(next@15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4))(react@19.0.4)':
     optionalDependencies:
-      next: 15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1)
-      react: 19.0.1
+      next: 15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4)
+      react: 19.0.4
 
-  '@vercel/speed-insights@1.2.0(next@15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1))(react@19.0.1)':
+  '@vercel/speed-insights@1.2.0(next@15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4))(react@19.0.4)':
     optionalDependencies:
-      next: 15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1)
-      react: 19.0.1
+      next: 15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4)
+      react: 19.0.4
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -3731,7 +3732,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  ky@1.14.0: {}
+  ky@1.14.3: {}
 
   language-subtag-registry@0.3.23: {}
 
@@ -3845,22 +3846,22 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-themes@0.4.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1):
+  next-themes@0.4.6(react-dom@19.0.4(react@19.0.4))(react@19.0.4):
     dependencies:
-      react: 19.0.1
-      react-dom: 19.0.1(react@19.0.1)
+      react: 19.0.4
+      react-dom: 19.0.4(react@19.0.4)
 
-  next@15.3.6(react-dom@19.0.1(react@19.0.1))(react@19.0.1):
+  next@15.3.9(react-dom@19.0.4(react@19.0.4))(react@19.0.4):
     dependencies:
-      '@next/env': 15.3.6
+      '@next/env': 15.3.9
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.15
       busboy: 1.6.0
       caniuse-lite: 1.0.30001759
       postcss: 8.4.31
-      react: 19.0.1
-      react-dom: 19.0.1(react@19.0.1)
-      styled-jsx: 5.1.6(react@19.0.1)
+      react: 19.0.4
+      react-dom: 19.0.4(react@19.0.4)
+      styled-jsx: 5.1.6(react@19.0.4)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.3.5
       '@next/swc-darwin-x64': 15.3.5
@@ -3885,7 +3886,7 @@ snapshots:
 
   notion-client@7.1.6:
     dependencies:
-      ky: 1.14.0
+      ky: 1.14.3
       notion-types: 7.1.6
       notion-utils: 7.1.6
       p-map: 7.0.4
@@ -4070,18 +4071,18 @@ snapshots:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
-  react-dom@19.0.1(react@19.0.1):
+  react-dom@19.0.4(react@19.0.4):
     dependencies:
-      react: 19.0.1
+      react: 19.0.4
       scheduler: 0.25.0
 
-  react-icons@5.5.0(react@19.0.1):
+  react-icons@5.5.0(react@19.0.4):
     dependencies:
-      react: 19.0.1
+      react: 19.0.4
 
   react-is@16.13.1: {}
 
-  react@19.0.1: {}
+  react@19.0.4: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -4340,10 +4341,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.6(react@19.0.1):
+  styled-jsx@5.1.6(react@19.0.4):
     dependencies:
       client-only: 0.0.1
-      react: 19.0.1
+      react: 19.0.4
 
   supports-color@7.2.0:
     dependencies:

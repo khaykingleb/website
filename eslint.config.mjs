@@ -37,6 +37,7 @@ const eslintConfig = [
       },
     },
     rules: {
+      "import/no-unresolved": ["error", { ignore: ["^react-notion-x"] }],
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
       "react/react-in-jsx-scope": "off",
