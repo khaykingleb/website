@@ -25,7 +25,9 @@ export function ThemeToggle() {
   };
 
   /**
-   * Get the appropriate icon based on current theme
+   * Get the appropriate icon based on current theme.
+   *
+   * @returns The theme icon element.
    */
   const getThemeIcon = () => {
     const iconClass = `

@@ -1,9 +1,11 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import type { ExtendedRecordMap } from "notion-types";
+import type { ComponentProps } from "react";
 import { useEffect } from "react";
 import { NotionRenderer } from "react-notion-x";
+
+type RecordMap = ComponentProps<typeof NotionRenderer>["recordMap"];
 
 const Code = dynamic(() =>
   import("react-notion-x/build/third-party/code").then(async (m) => {
@@ -95,7 +97,7 @@ export default function NotionRendererClient({
   recordMap,
   headerSlugMap,
 }: {
-  recordMap: ExtendedRecordMap;
+  recordMap: RecordMap;
   headerSlugMap: Record<string, string>;
 }) {
   useHeaderSlugRewrites(headerSlugMap);

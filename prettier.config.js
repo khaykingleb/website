@@ -1,4 +1,4 @@
-/** @type {import(prettier).Config} */
+/** @type {import("prettier").Config} */
 export default {
   printWidth: 80,
   tabWidth: 2,
