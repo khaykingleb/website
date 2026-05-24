@@ -12,6 +12,7 @@
 
 .notion {
   @apply !bg-[hsl(var(--b1))] !text-[hsl(var(--bc))];
+  --notion-max-width: 100%;
 }
 
 .notion-table-of-contents-item,
@@ -40,46 +41,62 @@
 /* Typography & Layout */
 
 .notion-page {
-  @apply !pl-0;
+  @apply !w-full !px-0;
 }
 
 .notion-title {
   @apply !hidden;
 }
 
-.notion-table-of-contents,
 .notion-h1,
 .notion-h2,
-.notion-h3,
+.notion-h3 {
+  @apply font-serif-display !w-full;
+}
+
+.notion-table-of-contents,
 .notion-list,
 .notion-text {
-  @apply font-gill-sans !w-full;
+  @apply font-sans-display !w-full;
 }
 
 .notion-h1 {
-  @apply !mt-3 !text-2xl sm:!text-3xl !tracking-tight;
+  @apply !mt-3 !mb-1 !text-xl !font-medium !tracking-tight sm:!text-2xl
+    md:!text-3xl;
 }
 
 .notion-h2 {
-  @apply !mt-2 !text-xl sm:!text-2xl !tracking-tight;
+  @apply !mt-2 !mb-1 !text-lg !font-medium !tracking-tight sm:!text-xl
+    md:!text-2xl;
 }
 
 .notion-h3 {
-  @apply !mt-1 !text-base sm:!text-lg !tracking-tight;
+  @apply !mt-1 !mb-1 !text-base !font-medium !tracking-tight sm:!text-lg;
 }
 
 .notion-asset-caption {
-  @apply font-gill-sans text-center;
+  @apply font-sans-display text-center;
 }
 
 .notion-callout {
   @apply !ml-1;
 }
 
-.notion-table-of-contents,
 .notion-list,
 .notion-text {
-  @apply !mt-0 !text-sm sm:!text-base;
+  @apply !mt-0 !text-[15px] !leading-[1.55];
+}
+
+.notion-table-of-contents {
+  @apply !mt-0 !text-sm;
+}
+
+.notion-table-of-contents-item {
+  @apply !pl-0;
+}
+
+.notion-text {
+  @apply !text-pretty !hyphens-auto;
 }
 
 @media (max-width: 767px) {

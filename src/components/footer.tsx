@@ -1,89 +1,79 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { MdAutoMode, MdDarkMode, MdLightMode } from "react-icons/md";
 
 /**
- * Component to toggle between light and dark themes.
+ * Component to toggle between light, dark, and system themes.
  *
  * @returns The ThemeToggle component.
  */
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   /**
-   * Handle the theme toggle.
+   *
    */
   const handleThemeToggle = () => {
-    if (theme === "system") {
-      setTheme("light");
-    } else if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("system");
-    }
+    if (theme === "system") setTheme("light");
+    else if (theme === "light") setTheme("dark");
+    else setTheme("system");
   };
 
-  /**
-   * Get the appropriate icon based on current theme.
-   *
-   * @returns The theme icon element.
-   */
-  const getThemeIcon = () => {
-    const iconClass = `
-      h-6 w-6 cursor-pointer transition-transform
-      md:hover:scale-110
-    `;
+  const Icon =
+    theme === "light"
+      ? MdLightMode
+      : theme === "dark"
+        ? MdDarkMode
+        : MdAutoMode;
 
-    switch (theme) {
-      case "light":
-        return (
-          <MdLightMode className={iconClass} onClick={handleThemeToggle} />
-        );
-      case "dark":
-        return <MdDarkMode className={iconClass} onClick={handleThemeToggle} />;
-      case "system":
-        return <MdAutoMode className={iconClass} onClick={handleThemeToggle} />;
-    }
-  };
-  return getThemeIcon();
+  if (!mounted) {
+    return <div aria-hidden="true" className="h-4 w-4" />;
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={handleThemeToggle}
+      aria-label={`Theme: ${theme}. Click to change.`}
+      className={`
+        cursor-pointer text-base-content/45 transition-colors
+        hover:text-base-content
+      `}
+    >
+      <Icon className="h-4 w-4" />
+    </button>
+  );
 }
 
 /**
- * Copyright component
- *
- * @param startYear - The starting year for the copyright range.
- * @returns The Copyright component.
- */
-const Copyright = ({ startYear = 2024 }: { startYear?: number }) => {
-  const currentYear = new Date().getFullYear();
-  const yearLabel =
-    startYear === currentYear
-      ? `${currentYear}`
-      : `${startYear}-${currentYear}`;
-  return (
-    <div className="mt-1 text-center text-sm">
-      <p>&copy; {yearLabel}, Gleb Khaykin</p>
-    </div>
-  );
-};
-
-/**
- * Footer component
+ * Footer component.
  *
  * @returns The Footer component.
  */
 export const Footer = () => {
+  const startYear = 2024;
+  const currentYear = new Date().getFullYear();
+  const yearLabel =
+    startYear === currentYear
+      ? `${currentYear}`
+      : `${startYear}–${currentYear}`;
+
   return (
-    <footer className="relative z-10 mb-4 pt-2 pb-2">
-      <div
-        className={`
-          container mx-auto mt-4 flex flex-col items-center justify-between
-        `}
-      >
-        <ThemeToggle />
-        <Copyright />
-      </div>
+    <footer
+      className={`
+        relative z-10 flex flex-col items-center gap-2 py-6 font-sans-display
+        text-xs text-base-content/40
+      `}
+    >
+      <ThemeToggle />
+      <span>© {yearLabel}, Gleb Khaykin</span>
     </footer>
   );
 };

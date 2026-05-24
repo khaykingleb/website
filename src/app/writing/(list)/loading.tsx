@@ -1,6 +1,6 @@
 import { FaSearch } from "react-icons/fa";
 
-import { Pagination } from "@/app/blog/(list)/components/pagination";
+import { Pagination } from "@/app/writing/(list)/components/pagination";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 

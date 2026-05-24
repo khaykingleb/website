@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 /**
- * Avatar component
+ * Profile avatar.
  *
- * @returns Avatar component
+ * @returns The Avatar component.
  */
 export const Avatar = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,17 +14,16 @@ export const Avatar = () => {
   return (
     <div
       className={`
-        relative mx-2 h-48 w-48 overflow-hidden rounded-full transition-all
-        duration-300 ease-in-out
-        sm:h-64 sm:w-64
-        md:hover:scale-102
-        ${isLoading ? "animate-pulse bg-gray-200" : ""}
+        relative h-40 w-40 overflow-hidden rounded-full
+        sm:h-52 sm:w-52
+        ${isLoading ? "animate-pulse bg-base-300" : ""}
       `}
     >
       <Image
         src="/avatar.webp"
-        alt="Avatar"
+        alt="Gleb Khaykin"
         fill
+        sizes="176px"
         className={`
           rounded-full object-cover
           ${

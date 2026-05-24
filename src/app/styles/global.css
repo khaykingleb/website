@@ -5,20 +5,54 @@
 }
 
 @plugin "daisyui/theme" {
+  name: "light";
+
+  color-scheme: light;
+
+  --color-base-100: #f7f3e8;
+  --color-base-200: #efeadb;
+  --color-base-300: #e3dcc8;
+  --color-base-content: #1a1a1a;
+}
+
+@plugin "daisyui/theme" {
   name: "dark";
 
   color-scheme: dark;
 
-  --color-base-100: #0e0e0f;
-  --color-base-200: #1a1a1c;
-  --color-base-300: #262629;
-  --color-base-content: #f5f5f5;
+  --color-base-100: #13110f;
+  --color-base-200: #1d1a16;
+  --color-base-300: #2a2620;
+  --color-base-content: #f7f5f0;
 }
 
-@utility font-gill-sans {
-  font-family: "Gill Sans", sans-serif;
+@utility font-sans-display {
+  font-family: var(--font-sans-display), "Gill Sans", sans-serif;
 }
 
-@utility font-poppins {
-  font-family: Poppins, sans-serif;
+@utility font-serif-display {
+  font-family:
+    var(--font-cormorant), Palatino, "Palatino Linotype", Georgia, serif;
+}
+
+body {
+  font-family: var(--font-sans-display), "Gill Sans", sans-serif;
+}
+
+::selection {
+  background-color: color-mix(
+    in oklab,
+    var(--color-base-content) 18%,
+    transparent
+  );
+  color: var(--color-base-content);
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid
+      color-mix(in oklab, var(--color-base-content) 55%, transparent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
 }

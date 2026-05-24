@@ -3,7 +3,8 @@
 This is the repository for my [personal website](https://khaykingleb.com).
 
 ## Prerequisites
-The only prerequisite tool for this project is [asdf](https://asdf-vm.com/) — make sure you have it installed.
+
+You'll need [asdf](https://asdf-vm.com/) and [just](https://github.com/casey/just) installed.
 
 ## Getting Started
 
@@ -15,36 +16,32 @@ The only prerequisite tool for this project is [asdf](https://asdf-vm.com/) — 
 
 2.  Initialize & setup:
     ```bash
-    make init
+    just setup-init
     ```
 
-    This command installs tools, dependencies, sets up `.env`, and pre-commit hooks.
+    This installs tools, dependencies, creates `.env`, and sets up pre-commit hooks.
 
 3.  Configure environment:
     Edit the created `.env` file with your Supabase and Notion API keys.
 
-
 ## Usage
 
-For a full list of available targets, run:
+For a full list of available recipes, run:
 
 ```bash
-make help
+just
 ```
 
 To start the development server:
 
 ```bash
-make supabase-start \
-    && make deps-dev \
-    && make dev
+just supabase-start \
+    && just app-dev
 ```
 
 To run the production build locally:
 
 ```bash
-make supabase-start \
-    && make deps-prod \
-    && make build \
-    && make start
+just supabase-start \
+    && just app-start
 ```

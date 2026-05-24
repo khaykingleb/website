@@ -1,5 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { FaCheck, FaSearch, FaTimes } from "react-icons/fa";
+import {
+  HiCheck,
+  HiOutlineMagnifyingGlass,
+  HiOutlineXMark,
+} from "react-icons/hi2";
 
 import { Tables } from "@/integrations/supabase/database.types";
 
@@ -106,7 +110,7 @@ export const TagSearch = ({
               `}
               aria-label="Clear search"
             >
-              <FaTimes />
+              <HiOutlineXMark />
             </button>
           </div>
           {filteredTags.length > 0 && (
@@ -124,7 +128,9 @@ export const TagSearch = ({
                 if (e.key === "ArrowDown") {
                   e.preventDefault();
                   const currentLi = current.closest("li");
-                  const nextLi = currentLi?.nextElementSibling;
+                  const list = currentLi?.parentElement;
+                  const nextLi =
+                    currentLi?.nextElementSibling ?? list?.firstElementChild;
                   const nextButton = nextLi?.querySelector("button");
                   if (nextButton instanceof HTMLElement) {
                     nextButton.focus();
@@ -133,7 +139,9 @@ export const TagSearch = ({
                 } else if (e.key === "ArrowUp") {
                   e.preventDefault();
                   const currentLi = current.closest("li");
-                  const prevLi = currentLi?.previousElementSibling;
+                  const list = currentLi?.parentElement;
+                  const prevLi =
+                    currentLi?.previousElementSibling ?? list?.lastElementChild;
                   const prevButton = prevLi?.querySelector("button");
                   if (prevButton instanceof HTMLElement) {
                     prevButton.focus();
@@ -160,20 +168,17 @@ export const TagSearch = ({
                     <span
                       className={`
                         mr-2 flex h-5 w-5 items-center justify-center
-                        rounded-full border-2 transition-transform duration-200
-                        md:hover:scale-105 md:hover:border-blue-400
+                        rounded-full border transition-colors
+                        md:hover:border-base-content
                         ${
                           selectedTags.includes(tag)
-                            ? `border-blue-400 bg-blue-400`
-                            : `
-                              border-base-300
-                              dark:border-gray-600
-                            `
+                            ? "border-base-content bg-base-content"
+                            : "border-base-content/30"
                         }
                       `}
                     >
                       {selectedTags.includes(tag) && (
-                        <FaCheck className="text-xs text-white" />
+                        <HiCheck className="text-xs text-base-100" />
                       )}
                     </span>
                     <span className="text-sm text-base-content">{tag}</span>
@@ -193,7 +198,7 @@ export const TagSearch = ({
           `}
           aria-label="Search tags"
         >
-          <FaSearch />
+          <HiOutlineMagnifyingGlass />
         </button>
       )}
     </div>

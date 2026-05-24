@@ -16,6 +16,23 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  /**
+   * Redirects for old blog posts.
+   *
+   * @returns A promise that resolves to the redirects configuration.
+   */
+  redirects: async () => [
+    {
+      source: "/blog",
+      destination: "/writing",
+      permanent: true,
+    },
+    {
+      source: "/blog/:slug",
+      destination: "/writing/:slug",
+      permanent: true,
+    },
+  ],
 };
 
 export default nextConfig;
