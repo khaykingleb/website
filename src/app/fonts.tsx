@@ -1,10 +1,11 @@
-import { Poppins } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 
-export const poppins = Poppins({
+export const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
 });
 
 export const gillSans = localFont({
@@ -25,5 +26,5 @@ export const gillSans = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-gill-sans",
+  variable: "--font-sans-display",
 });

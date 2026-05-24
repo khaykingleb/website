@@ -39,20 +39,21 @@ repos:
     hooks:
       - id: lint
         name: lint
-        entry: make lint
+        entry: just code-lint
         language: system
         types: [file]
         files: \.(js|ts|jsx|tsx)$
-        args: ["--quiet"]
+        pass_filenames: false
 
   - repo: local
     hooks:
       - id: prettier
         name: prettier
-        entry: make format
+        entry: just code-format
         language: system
         types: [file]
         files: \.(js|ts|jsx|tsx|css|md|json|yaml)$
+        pass_filenames: false
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v8.13.3

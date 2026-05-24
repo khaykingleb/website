@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
-import { FaHome } from "react-icons/fa";
-import { IoMdRefresh } from "react-icons/io";
 
 /**
- * GlobalError component to display error information and provide user actions.
+ * Top-level error boundary, rendered when an unrecoverable error escapes the
+ * app. Replaces the default Next.js error screen with editorial styling.
  *
- * @param error - The error object containing error details.
- * @param reset - The function to reset the error state.
- * @returns The rendered GlobalError component.
+ * @param error - The captured error.
+ * @param reset - Resets the error boundary and re-renders the segment.
+ * @returns The error page.
  */
 export default function GlobalError({
   error,
@@ -29,40 +28,60 @@ export default function GlobalError({
         <div className="flex min-h-screen flex-col">
           <main
             className={`
-              flex flex-grow flex-col items-center justify-center px-4
-              text-center
+              mx-auto flex w-full max-w-[56rem] flex-1 flex-col justify-center
+              px-6
+              sm:px-10
+              xl:px-16
             `}
           >
-            <h1 className="mb-2 font-poppins text-4xl font-black">
-              Something went wrong!
+            <p
+              className={`
+                font-sans-display text-sm tracking-wide text-base-content/45
+                uppercase
+              `}
+            >
+              Error
+            </p>
+            <h1
+              className={`
+                mt-2 font-serif-display text-4xl leading-none font-medium
+                tracking-[-0.02em]
+                sm:text-5xl
+              `}
+            >
+              Something broke.
             </h1>
-            <h2 className="font-gill-sans text-base">
-              If the issue continues, please try again later or reach out to me
-            </h2>
-            <div className="mt-4 flex gap-4 font-gill-sans">
+            <p
+              className={`
+                mt-4 max-w-[28rem] font-sans-display text-[15px] leading-[1.55]
+                text-base-content/70
+              `}
+            >
+              An unexpected error occurred. Try{" "}
               <button
+                type="button"
                 onClick={reset}
                 className={`
-                  flex cursor-pointer items-center gap-x-1 bg-transparent
-                  text-xl font-bold transition-all
-                  md:hover:scale-105 md:hover:opacity-80
+                  cursor-pointer underline decoration-base-content/30
+                  decoration-1 underline-offset-[3px] transition-colors
+                  hover:decoration-base-content/70
                 `}
               >
-                <IoMdRefresh />
-                Try again
+                reloading
               </button>
+              , or head back{" "}
               <Link
                 href="/"
                 className={`
-                  flex items-center gap-x-1 bg-transparent text-xl font-bold
-                  transition-all
-                  md:hover:scale-105 md:hover:opacity-80
+                  underline decoration-base-content/30 decoration-1
+                  underline-offset-[3px] transition-colors
+                  hover:decoration-base-content/70
                 `}
               >
-                <FaHome />
-                Go to home
+                home
               </Link>
-            </div>
+              .
+            </p>
           </main>
         </div>
       </body>

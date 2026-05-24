@@ -1,34 +1,57 @@
-"use client";
-
-import { FaArrowLeft } from "react-icons/fa";
+import Link from "next/link";
 
 /**
- * Not found page component.
+ * 404 page rendered for routes that don't resolve to a page.
  *
- * @returns The not found page component.
+ * @returns The not-found page.
  */
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col">
       <main
         className={`
-          flex flex-grow flex-col items-center justify-center px-4 text-center
+          mx-auto flex w-full max-w-[56rem] flex-1 flex-col justify-center px-6
+          sm:px-10
+          xl:px-16
         `}
       >
-        <h2 className="font-poppins text-4xl font-bold">
-          Page doesn&apos;t exist
-        </h2>
-        <div className="mt-4 flex gap-4">
-          <button
-            onClick={() => window.history.back()}
-            className={`
-              flex cursor-pointer items-center gap-x-2 bg-transparent text-xl
-              font-bold transition-all
-              md:hover:scale-105 md:hover:opacity-80
-            `}
-          >
-            <FaArrowLeft /> Go back
-          </button>
+        <p
+          className={`
+            font-sans-display text-sm tracking-wide text-base-content/45
+            uppercase
+          `}
+        >
+          404
+        </p>
+        <h1
+          className={`
+            mt-2 font-serif-display text-4xl leading-none font-medium
+            tracking-[-0.02em]
+            sm:text-5xl
+          `}
+        >
+          Page not found
+        </h1>
+        <div
+          className={`
+            mt-4 max-w-[28rem] space-y-2 font-sans-display text-[15px]
+            leading-[1.55] text-base-content/70
+          `}
+        >
+          <p>The link is broken, or the page has moved.</p>
+          <p>
+            <Link
+              href="/"
+              className={`
+                underline decoration-base-content/30 decoration-1
+                underline-offset-[3px] transition-colors
+                hover:decoration-base-content/70
+              `}
+            >
+              Head back home
+            </Link>
+            .
+          </p>
         </div>
       </main>
     </div>

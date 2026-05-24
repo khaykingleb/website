@@ -4,7 +4,7 @@ import { getBlockValue, getPageTableOfContents } from "notion-utils";
 import type { ComponentProps } from "react";
 import { NotionRenderer } from "react-notion-x";
 
-import NotionRendererClient from "@/app/blog/[slug]/components/notion-renderer";
+import NotionRendererClient from "@/app/writing/[slug]/components/notion-renderer";
 
 type RecordMap = ComponentProps<typeof NotionRenderer>["recordMap"];
 

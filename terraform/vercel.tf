@@ -3,14 +3,14 @@ resource "vercel_project" "khaykingleb_com" {
   framework    = "nextjs"
   node_version = "22.x"
 
-  install_command = "make deps-prod"
-  build_command   = "make build"
-  dev_command     = "make dev"
+  install_command = "pnpm install --frozen-lockfile"
+  build_command   = "pnpm --dir vendor/react-notion-x install && pnpm --dir vendor/react-notion-x build && pnpm build"
+  dev_command     = "pnpm dev"
 
 
   git_repository = {
     type = "github"
-    repo = "khaykingleb/khaykingleb-com"
+    repo = "khaykingleb/website"
   }
 }
 

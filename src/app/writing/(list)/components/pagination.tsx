@@ -5,12 +5,13 @@ import React from "react";
 const NUM_VISIBLE = 5;
 
 /**
- * Reusable button for pagination controls.
+ * Editorial pagination button.
  *
- * @param children - The content to be displayed inside the button.
- * @param onClick - The function to call when the button is clicked.
+ * @param children - Button content.
+ * @param onClick - Click handler.
  * @param disabled - Whether the button is disabled.
- * @param isActive - Whether the button is active.
+ * @param isActive - Whether the button represents the current page.
+ * @param ariaLabel - Optional aria-label for icon-only buttons.
  * @returns The PageButton component.
  */
 const PageButton = ({
@@ -18,30 +19,37 @@ const PageButton = ({
   onClick,
   disabled,
   isActive = false,
+  ariaLabel,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
   isActive?: boolean;
+  ariaLabel?: string;
 }) => (
   <button
+    type="button"
     className={`
-      btn join-item h-8 w-8 transition-colors btn-sm
+      inline-flex h-8 w-8 cursor-pointer items-center justify-center
+      font-sans-display text-xs text-base-content/55 tabular-nums
+      transition-colors
+      hover:text-base-content
+      disabled:cursor-not-allowed disabled:text-base-content/20
+      disabled:hover:text-base-content/20
+      sm:text-sm
       ${
         isActive
           ? `
-            bg-base-300
-            hover:bg-base-300
+            text-base-content underline decoration-base-content/40 decoration-1
+            underline-offset-[6px]
           `
-          : `
-            bg-base-100
-            hover:bg-base-200
-          `
+          : ""
       }
-      ${disabled ? "cursor-not-allowed" : "cursor-pointer"}
     `}
     onClick={onClick}
     disabled={disabled}
+    aria-label={ariaLabel}
+    aria-current={isActive ? "page" : undefined}
   >
     {children}
   </button>
@@ -65,7 +73,7 @@ export const Pagination = ({
   // eslint-disable-next-line no-unused-vars
   onPageChange?: (page: number) => void;
 }) => {
-  if (pagesInTotal < 1) return null;
+  if (pagesInTotal <= 1) return null;
 
   const startPage = Math.floor(currentPage / NUM_VISIBLE) * NUM_VISIBLE;
   const endPage = Math.min(startPage + NUM_VISIBLE, pagesInTotal);
@@ -75,16 +83,18 @@ export const Pagination = ({
   );
 
   return (
-    <div className="mt-2 -mb-2 join flex justify-center">
-      {/* Previous page button */}
+    <nav
+      aria-label="Pagination"
+      className="flex items-center justify-center gap-1"
+    >
       <PageButton
         onClick={() => onPageChange?.(currentPage - 1)}
         disabled={currentPage === 0}
+        ariaLabel="Previous page"
       >
-        «
+        ←
       </PageButton>
 
-      {/* Page number buttons */}
       {pages.map((page) => (
         <PageButton
           key={page}
@@ -95,13 +105,13 @@ export const Pagination = ({
         </PageButton>
       ))}
 
-      {/* Next page button */}
       <PageButton
         onClick={() => onPageChange?.(currentPage + 1)}
         disabled={currentPage === pagesInTotal - 1}
+        ariaLabel="Next page"
       >
-        »
+        →
       </PageButton>
-    </div>
+    </nav>
   );
 };

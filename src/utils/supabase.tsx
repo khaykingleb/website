@@ -61,7 +61,10 @@ async function fetchPostBySlug(slug: string) {
     throw error;
   }
 
-  return data;
+  return {
+    ...data,
+    image_url: await getPostImageUrl(data.image_url),
+  };
 }
 
 export const getPostBySlug = unstable_cache(fetchPostBySlug, ["post"], {
