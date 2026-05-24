@@ -22,9 +22,9 @@ export const Header = ({
 }: HeaderProps) => (
   <header
     className={`
-      flex items-end justify-between gap-6 border-b border-base-content/10 pt-8
+      flex items-end justify-between gap-6 border-b border-base-content/10 pt-4
       pb-5
-      sm:pt-10
+      sm:pt-6
     `}
   >
     <h1
