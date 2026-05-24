@@ -74,7 +74,7 @@ const socials = [
  */
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
       <div
         className={`
           mx-auto flex w-full max-w-[56rem] flex-1 flex-col px-8
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <Header headerName="About" />
         <main
           className={`
-            grid grid-cols-1 gap-6 pt-6
+            grid min-w-0 grid-cols-1 gap-6 pt-6
             lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-4
           `}
         >
@@ -165,8 +165,9 @@ export default function AboutPage() {
           <article
             lang="en"
             className={`
-              mx-auto max-w-[32rem] space-y-3 font-sans-display text-[15px]
-              leading-[1.55] hyphens-auto text-base-content/85
+              mx-auto w-full max-w-[32rem] min-w-0 space-y-3 font-sans-display
+              text-[15px] leading-[1.55] break-words hyphens-auto
+              text-base-content/85
               lg:mx-0
             `}
           >
