@@ -31,7 +31,7 @@ export default function GlobalError({
               mx-auto flex w-full max-w-[56rem] flex-1 flex-col justify-center
               px-6
               sm:px-10
-              lg:px-16
+              xl:px-16
             `}
           >
             <p

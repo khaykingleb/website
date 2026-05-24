@@ -30,7 +30,7 @@ export default function Home() {
       <div
         aria-hidden="true"
         className={`
-          pointer-events-none absolute -top-40 -right-40
+          pointer-events-none absolute -top-32 -right-48
           lg:top-1/2 lg:right-8 lg:-translate-y-1/2
           2xl:right-24
         `}

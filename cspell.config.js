@@ -17,6 +17,7 @@ export default {
     "supabase",
     "src/components/ascii-donut.tsx",
   ],
+  ignoreRegExpList: ["/\\b\\w+(?:&shy;\\w+)+\\b/g"],
   words: [
     "workdir",
     "tseslint",

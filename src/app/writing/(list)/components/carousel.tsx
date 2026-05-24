@@ -41,13 +41,13 @@ export const Carousel = ({ posts }: { posts: Tables<"posts">[] }) => {
           <Link
             href={`/writing/${post.slug}`}
             className={`
-              group flex flex-col gap-2 py-4
-              sm:flex-row sm:items-start sm:justify-between sm:gap-8 sm:py-7
+              group flex items-start justify-between gap-4 py-4
+              sm:gap-8 sm:py-7
             `}
           >
             <h2
               className={`
-                font-serif-display text-xl leading-tight font-medium
+                min-w-0 font-serif-display text-xl leading-tight font-medium
                 tracking-[-0.01em] text-base-content decoration-base-content/30
                 decoration-1 underline-offset-[6px] transition-[text-decoration]
                 duration-200
@@ -59,21 +59,16 @@ export const Carousel = ({ posts }: { posts: Tables<"posts">[] }) => {
             </h2>
             <div
               className={`
-                flex shrink-0 flex-col gap-1 font-sans-display text-xs
-                text-base-content/45
-                sm:items-end sm:text-sm
+                flex shrink-0 flex-col gap-0.5 text-right font-sans-display
+                text-xs text-base-content/45
+                sm:gap-1 sm:text-sm
               `}
             >
               <time className="tabular-nums">
                 {formatDate(post.created_at)}
               </time>
               {post.tags.length > 0 && (
-                <span
-                  className={`
-                    flex flex-wrap gap-2
-                    sm:justify-end
-                  `}
-                >
+                <span className="flex flex-wrap justify-end gap-2">
                   {post.tags.map((tag) => (
                     <span key={tag}>#{tag}</span>
                   ))}

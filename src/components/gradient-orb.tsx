@@ -11,8 +11,8 @@ export function GradientOrb() {
     <div
       aria-hidden="true"
       className={`
-        pointer-events-none relative h-[480px] w-[480px]
-        sm:h-[600px] sm:w-[600px]
+        pointer-events-none relative h-[360px] w-[360px]
+        sm:h-[520px] sm:w-[520px]
         lg:h-[720px] lg:w-[720px]
       `}
     >

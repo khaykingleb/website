@@ -84,7 +84,7 @@ export default async function BlogPostPage({
         className={`
           mx-auto flex w-full max-w-[56rem] flex-1 flex-col px-6
           sm:px-10
-          lg:px-16
+          xl:px-16
         `}
       >
         <Header headerName={post.title} backHref="/writing" />
