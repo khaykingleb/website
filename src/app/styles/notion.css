@@ -32,15 +32,9 @@
   @apply text-[hsl(var(--bc))] opacity-70;
 }
 
-.notion-code,
-.notion-code pre,
-.notion-code code {
-  @apply !bg-[hsl(var(--b1))] !text-[hsl(var(--bc))];
-}
-
 .notion-code {
-  @apply !my-5 overflow-hidden rounded-xl border border-base-content/10
-    !bg-base-200/60 shadow-sm;
+  @apply !my-5 overflow-hidden rounded-lg border border-base-content/10
+    !bg-base-200/25;
 }
 
 .notion-code pre {
@@ -52,7 +46,7 @@
 }
 
 :is([data-theme="dark"], .dark) .notion-code {
-  @apply border-base-content/10 !bg-base-200/35;
+  @apply border-base-content/10 !bg-base-200/25;
 }
 
 /* Typography & Layout */

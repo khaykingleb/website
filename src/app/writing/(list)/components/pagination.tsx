@@ -4,21 +4,6 @@ import React from "react";
 
 const NUM_VISIBLE = 5;
 
-const buttonClasses = `
-  inline-flex h-8 w-8 cursor-pointer items-center justify-center
-  font-sans-display text-xs tabular-nums text-base-content/55
-  transition-colors
-  hover:text-base-content
-  disabled:cursor-not-allowed disabled:text-base-content/20
-  disabled:hover:text-base-content/20
-  sm:text-sm
-`;
-
-const activeClasses = `
-  text-base-content underline underline-offset-[6px] decoration-1
-  decoration-base-content/40
-`;
-
 /**
  * Editorial pagination button.
  *
@@ -45,8 +30,21 @@ const PageButton = ({
   <button
     type="button"
     className={`
-      ${buttonClasses}
-      ${isActive ? activeClasses : ""}
+      inline-flex h-8 w-8 cursor-pointer items-center justify-center
+      font-sans-display text-xs text-base-content/55 tabular-nums
+      transition-colors
+      hover:text-base-content
+      disabled:cursor-not-allowed disabled:text-base-content/20
+      disabled:hover:text-base-content/20
+      sm:text-sm
+      ${
+        isActive
+          ? `
+            text-base-content underline decoration-base-content/40 decoration-1
+            underline-offset-[6px]
+          `
+          : ""
+      }
     `}
     onClick={onClick}
     disabled={disabled}
