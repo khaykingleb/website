@@ -33,12 +33,12 @@
 }
 
 .notion-code {
-  @apply !my-5 overflow-hidden rounded-lg border border-base-content/10
+  @apply !my-3 overflow-hidden rounded-lg border border-base-content/10
     !bg-base-200/25;
 }
 
 .notion-code pre {
-  @apply !m-0 overflow-x-auto !bg-transparent !p-4 text-[13px] leading-[1.55];
+  @apply !m-0 overflow-x-auto !bg-transparent !p-3.5 text-[13px] leading-[1.55];
 }
 
 .notion-code code {
@@ -46,7 +46,57 @@
 }
 
 :is([data-theme="dark"], .dark) .notion-code {
-  @apply border-base-content/10 !bg-base-200/25;
+  @apply border-base-content/15 !bg-base-200/70;
+}
+
+:is([data-theme="dark"], .dark) .notion-code pre,
+:is([data-theme="dark"], .dark) .notion-code code,
+:is([data-theme="dark"], .dark) .notion-code .token {
+  color: var(--color-base-content);
+  text-shadow: none;
+}
+
+:is([data-theme="dark"], .dark) .notion-code .token.comment,
+:is([data-theme="dark"], .dark) .notion-code .token.prolog,
+:is([data-theme="dark"], .dark) .notion-code .token.doctype,
+:is([data-theme="dark"], .dark) .notion-code .token.cdata {
+  color: #9a948a;
+}
+
+:is([data-theme="dark"], .dark) .notion-code .token.punctuation,
+:is([data-theme="dark"], .dark) .notion-code .token.operator {
+  color: #c8c1b8;
+}
+
+:is([data-theme="dark"], .dark) .notion-code .token.property,
+:is([data-theme="dark"], .dark) .notion-code .token.attr-name,
+:is([data-theme="dark"], .dark) .notion-code .token.variable {
+  color: #e5c07b;
+}
+
+:is([data-theme="dark"], .dark) .notion-code .token.string,
+:is([data-theme="dark"], .dark) .notion-code .token.char,
+:is([data-theme="dark"], .dark) .notion-code .token.builtin,
+:is([data-theme="dark"], .dark) .notion-code .token.inserted {
+  color: #98c379;
+}
+
+:is([data-theme="dark"], .dark) .notion-code .token.keyword,
+:is([data-theme="dark"], .dark) .notion-code .token.atrule,
+:is([data-theme="dark"], .dark) .notion-code .token.attr-value {
+  color: #d19a66;
+}
+
+:is([data-theme="dark"], .dark) .notion-code .token.function,
+:is([data-theme="dark"], .dark) .notion-code .token.class-name {
+  color: #61afef;
+}
+
+:is([data-theme="dark"], .dark) .notion-code .token.boolean,
+:is([data-theme="dark"], .dark) .notion-code .token.number,
+:is([data-theme="dark"], .dark) .notion-code .token.constant,
+:is([data-theme="dark"], .dark) .notion-code .token.symbol {
+  color: #c678dd;
 }
 
 /* Typography & Layout */

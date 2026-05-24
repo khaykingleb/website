@@ -45,5 +45,6 @@ export default {
     "migra",
     "ngrok",
     "justfile",
+    "atrule",
   ],
 };
