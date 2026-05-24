@@ -41,7 +41,7 @@ export default function Posts({ posts }: { posts: Tables<"posts">[] }) {
       </Header>
       <Carousel posts={visiblePosts} />
       {pagesInTotal > 1 && (
-        <div className="mt-auto pt-12">
+        <div className="mt-auto pt-8">
           <Pagination
             currentPage={currentPage}
             pagesInTotal={pagesInTotal}

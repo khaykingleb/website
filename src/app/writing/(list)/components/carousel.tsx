@@ -42,7 +42,7 @@ export const Carousel = ({ posts }: { posts: Tables<"posts">[] }) => {
             href={`/writing/${post.slug}`}
             className={`
               group flex items-start justify-between gap-4 py-4
-              sm:gap-8 sm:py-7
+              sm:gap-8 sm:py-5
             `}
           >
             <h2

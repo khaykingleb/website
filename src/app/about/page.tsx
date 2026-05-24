@@ -77,7 +77,7 @@ export default function AboutPage() {
     <div className="flex min-h-screen flex-col overflow-x-hidden">
       <div
         className={`
-          mx-auto flex w-full max-w-[56rem] flex-1 flex-col px-8
+          mx-auto flex w-full max-w-[56rem] flex-1 flex-col px-6
           sm:px-10
           xl:px-16
         `}
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <Header headerName="About" />
         <main
           className={`
-            grid min-w-0 grid-cols-1 gap-6 pt-6
+            grid min-w-0 grid-cols-1 gap-6 pt-5
             lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-4
           `}
         >

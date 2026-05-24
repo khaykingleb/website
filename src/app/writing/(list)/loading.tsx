@@ -13,13 +13,13 @@ export default function Loading() {
   return (
     <div
       className={`
-        mx-auto flex min-h-screen w-full max-w-[800px] flex-grow flex-col px-4
-        sm:px-6
-        lg:px-8
+        mx-auto flex min-h-screen w-full max-w-[56rem] flex-grow flex-col px-6
+        sm:px-10
+        xl:px-16
       `}
     >
       <div className="flex flex-grow flex-col">
-        <Header headerName="Blog">
+        <Header headerName="Writing">
           <div className="relative flex items-center">
             <button
               aria-label="Search"

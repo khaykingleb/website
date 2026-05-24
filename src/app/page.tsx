@@ -48,8 +48,8 @@ export default function Home() {
       >
         <section
           className={`
-            max-w-[44rem] space-y-3
-            sm:space-y-4
+            max-w-[44rem] space-y-2
+            sm:space-y-3
           `}
         >
           <h1
