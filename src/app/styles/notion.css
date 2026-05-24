@@ -38,6 +38,23 @@
   @apply !bg-[hsl(var(--b1))] !text-[hsl(var(--bc))];
 }
 
+.notion-code {
+  @apply !my-5 overflow-hidden rounded-xl border border-base-content/10
+    !bg-base-200/60 shadow-sm;
+}
+
+.notion-code pre {
+  @apply !m-0 overflow-x-auto !bg-transparent !p-4 text-[13px] leading-[1.55];
+}
+
+.notion-code code {
+  @apply font-mono !bg-transparent;
+}
+
+:is([data-theme="dark"], .dark) .notion-code {
+  @apply border-base-content/10 !bg-base-200/35;
+}
+
 /* Typography & Layout */
 
 .notion-page {
