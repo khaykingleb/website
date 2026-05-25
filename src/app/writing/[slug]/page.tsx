@@ -100,8 +100,7 @@ export default async function BlogPostPage({
           >
             <h2
               className={`
-                mt-2 -mb-10 font-serif-display text-xl font-medium
-                tracking-[-0.01em]
+                mt-2 -mb-10 font-heading text-xl font-medium tracking-[-0.01em]
                 sm:mt-4 sm:text-2xl
                 md:text-3xl
               `}

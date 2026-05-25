@@ -26,17 +26,13 @@
   --color-base-content: #f7f5f0;
 }
 
-@utility font-sans-display {
-  font-family: var(--font-sans-display), "Gill Sans", sans-serif;
-}
-
-@utility font-serif-display {
+@utility font-heading {
   font-family:
     var(--font-cormorant), Palatino, "Palatino Linotype", Georgia, serif;
 }
 
 body {
-  font-family: var(--font-sans-display), "Gill Sans", sans-serif;
+  font-family: Palatino, "Palatino Linotype", Georgia, serif;
 }
 
 ::selection {

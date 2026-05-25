@@ -29,9 +29,8 @@ export const Header = ({
   >
     <h1
       className={`
-        flex items-baseline gap-3 font-serif-display
-        text-[clamp(1.75rem,5vw,2.25rem)] leading-none font-medium
-        tracking-[-0.02em]
+        flex items-baseline gap-3 font-heading text-[clamp(1.75rem,5vw,2.25rem)]
+        leading-none font-medium tracking-[-0.02em]
       `}
     >
       <Link

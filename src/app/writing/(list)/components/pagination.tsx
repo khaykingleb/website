@@ -30,9 +30,8 @@ const PageButton = ({
   <button
     type="button"
     className={`
-      inline-flex h-8 w-8 cursor-pointer items-center justify-center
-      font-sans-display text-xs text-base-content/55 tabular-nums
-      transition-colors
+      inline-flex h-8 w-8 cursor-pointer items-center justify-center text-xs
+      text-base-content/55 tabular-nums transition-colors
       hover:text-base-content
       disabled:cursor-not-allowed disabled:text-base-content/20
       disabled:hover:text-base-content/20

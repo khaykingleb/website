@@ -68,8 +68,8 @@ export const Footer = () => {
   return (
     <footer
       className={`
-        relative z-10 flex flex-col items-center gap-2 py-6 font-sans-display
-        text-xs text-base-content/40
+        relative z-10 flex flex-col items-center gap-2 py-6 text-xs
+        text-base-content/40
       `}
     >
       <ThemeToggle />

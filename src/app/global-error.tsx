@@ -34,17 +34,12 @@ export default function GlobalError({
               xl:px-16
             `}
           >
-            <p
-              className={`
-                font-sans-display text-sm tracking-wide text-base-content/45
-                uppercase
-              `}
-            >
+            <p className="text-sm tracking-wide text-base-content/45 uppercase">
               Error
             </p>
             <h1
               className={`
-                mt-2 font-serif-display text-4xl leading-none font-medium
+                mt-2 font-heading text-4xl leading-none font-medium
                 tracking-[-0.02em]
                 sm:text-5xl
               `}
@@ -53,7 +48,7 @@ export default function GlobalError({
             </h1>
             <p
               className={`
-                mt-4 max-w-[28rem] font-sans-display text-[15px] leading-[1.55]
+                mt-4 max-w-[28rem] text-[15px] leading-[1.55]
                 text-base-content/70
               `}
             >

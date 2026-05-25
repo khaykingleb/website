@@ -15,17 +15,12 @@ export default function NotFound() {
           xl:px-16
         `}
       >
-        <p
-          className={`
-            font-sans-display text-sm tracking-wide text-base-content/45
-            uppercase
-          `}
-        >
+        <p className="text-sm tracking-wide text-base-content/45 uppercase">
           404
         </p>
         <h1
           className={`
-            mt-2 font-serif-display text-4xl leading-none font-medium
+            mt-2 font-heading text-4xl leading-none font-medium
             tracking-[-0.02em]
             sm:text-5xl
           `}
@@ -34,8 +29,8 @@ export default function NotFound() {
         </h1>
         <div
           className={`
-            mt-4 max-w-[28rem] space-y-2 font-sans-display text-[15px]
-            leading-[1.55] text-base-content/70
+            mt-4 max-w-[28rem] space-y-2 text-[15px] leading-[1.55]
+            text-base-content/70
           `}
         >
           <p>The link is broken, or the page has moved.</p>

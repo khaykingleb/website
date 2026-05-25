@@ -15,7 +15,7 @@ export const Avatar = () => {
     <div
       className={`
         relative h-40 w-40 overflow-hidden rounded-full
-        sm:h-52 sm:w-52
+        sm:h-54 sm:w-54
         ${isLoading ? "animate-pulse bg-base-300" : ""}
       `}
     >

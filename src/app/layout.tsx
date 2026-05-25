@@ -8,7 +8,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import React from "react";
 
-import { cormorantGaramond, gillSans } from "@/app/fonts";
+import { cormorantGaramond } from "@/app/fonts";
 import { Providers } from "@/app/providers";
 
 const SITE_URL = "https://khaykingleb.com";
@@ -165,7 +165,6 @@ export default function RootLayout({
     <html
       lang="en"
       className={`
-        ${gillSans.variable}
         ${cormorantGaramond.variable}
       `}
       suppressHydrationWarning

@@ -27,9 +27,7 @@ export const Carousel = ({ posts }: { posts: Tables<"posts">[] }) => {
   if (posts.length === 0) {
     return (
       <div className="flex flex-grow items-center justify-center py-24">
-        <p className="font-sans-display text-base text-base-content/55">
-          No posts found.
-        </p>
+        <p className="text-base text-base-content/55">No posts found.</p>
       </div>
     );
   }
@@ -47,7 +45,7 @@ export const Carousel = ({ posts }: { posts: Tables<"posts">[] }) => {
           >
             <h2
               className={`
-                min-w-0 font-serif-display text-xl leading-tight font-medium
+                min-w-0 font-heading text-xl leading-tight font-medium
                 tracking-[-0.01em] text-base-content decoration-base-content/30
                 decoration-1 underline-offset-[6px] transition-[text-decoration]
                 duration-200
@@ -59,8 +57,8 @@ export const Carousel = ({ posts }: { posts: Tables<"posts">[] }) => {
             </h2>
             <div
               className={`
-                flex shrink-0 flex-col gap-0.5 text-right font-sans-display
-                text-xs text-base-content/45
+                flex shrink-0 flex-col gap-0.5 text-right text-xs
+                text-base-content/45
                 sm:gap-1 sm:text-sm
               `}
             >

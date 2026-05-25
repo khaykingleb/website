@@ -85,8 +85,8 @@ export default function AboutPage() {
         <Header headerName="About" />
         <main
           className={`
-            grid min-w-0 grid-cols-1 gap-6 pt-5
-            lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-4
+            grid min-w-0 grid-cols-1 gap-3 pt-4
+            lg:grid-cols-[240px_minmax(0,1fr)]
           `}
         >
           <aside
@@ -97,10 +97,10 @@ export default function AboutPage() {
           >
             <Avatar />
             <div className="flex flex-col gap-3">
-              <div className="font-sans-display">
+              <div>
                 <p
                   className={`
-                    flex items-center justify-center gap-x-1.5 text-sm
+                    flex items-center justify-center gap-x-0.5 text-sm
                     whitespace-nowrap text-base-content/75
                     lg:justify-start
                   `}
@@ -127,13 +127,14 @@ export default function AboutPage() {
                     lg:text-left
                   `}
                 >
-                  Amsterdam, Netherlands
+                  Amsterdam, The Netherlands
                 </p>
               </div>
 
               <ul
                 className={`
-                  flex items-center justify-center gap-2 text-base-content/40
+                  flex items-center justify-center gap-2 pb-2
+                  text-base-content/40
                   lg:justify-start
                 `}
               >
@@ -165,10 +166,9 @@ export default function AboutPage() {
           <article
             lang="en"
             className={`
-              mx-auto w-full max-w-[32rem] min-w-0 space-y-3 font-sans-display
-              text-[15px] leading-[1.55] break-words hyphens-auto
-              text-base-content/85
-              lg:mx-0
+              mx-auto w-full max-w-[32rem] min-w-0 space-y-3 text-[15px]
+              leading-[1.55] break-words hyphens-auto text-base-content/85
+              lg:mx-0 lg:max-w-none
             `}
           >
             <p>
@@ -181,10 +181,10 @@ export default function AboutPage() {
               >
                 Together AI
               </a>
-              , where I&apos;m building infra&shy;structure and tooling for
-              post-training of open-source LLMs at scale in areas like
-              fine-tuning, reinforce&shy;ment learning, eval&shy;uation, and
-              quan&shy;tization.
+              , where I&apos;m build&shy;ing infra&shy;structure and tooling for
+              post-train&shy;ing of open-source LLMs at scale in areas like
+              fine-tun&shy;ing, reinforce&shy;ment learning, eval&shy;uation,
+              and quan&shy;tization.
             </p>
             <p>
               Before this, I worked remotely for two SF-based AI startups. The
@@ -215,14 +215,15 @@ export default function AboutPage() {
               >
                 Cameos
               </a>
-              ), where I worked on speech synthesis. At the second, I built an
-              AI platform covering meeting transcription and a vision-LLM parser
-              for finance documents. The role was similar: platform, MLOps,
-              DevOps, and whatever else was needed to ship.
+              ), where I worked on speech syn&shy;thesis. At the second, I built
+              an AI platform covering meeting trans&shy;cription and a
+              vision-LLM parser for finance docu&shy;ments. The role was
+              similar: platform, MLOps, DevOps, and whatever else was needed to
+              ship.
             </p>
             <p>
-              Earlier, I studied Computer Science and Finance at the National
-              Research Uni&shy;versity{" "}
+              Earlier, I studied Com&shy;puter Science and Finance at the
+              National Research Uni&shy;versity{" "}
               <a
                 href="https://www.hse.ru/en/"
                 target="_blank"
@@ -232,8 +233,8 @@ export default function AboutPage() {
                 &quot;Higher School of Economics&quot;
               </a>{" "}
               in Moscow. While there, I also spent two years TA&apos;ing
-              Prob&shy;ability, Sta&shy;tistics, and Machine Learning courses
-              for the students, while picking up{" "}
+              Prob&shy;ability, Sta&shy;tistics, and Machine Learn&shy;ing
+              courses for the stu&shy;dents, while picking up{" "}
               <a
                 href="https://www.cfainstitute.org/"
                 target="_blank"
@@ -251,8 +252,8 @@ export default function AboutPage() {
               <Link href="/writing" className={proseLink}>
                 write
               </Link>{" "}
-              when I figure out something worth keeping or sharing for the
-              broader audience to see. It&apos;s usually about systems,
+              when I figure out some&shy;thing worth keeping or sharing for the
+              broader audi&shy;ence to see. It&apos;s usually about systems,
               infra&shy;structure, and tech&shy;nical rabbit holes from my work.
               Though, it might not always be about that!
             </p>

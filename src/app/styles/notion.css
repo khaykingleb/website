@@ -13,6 +13,7 @@
 .notion {
   @apply !bg-[hsl(var(--b1))] !text-[hsl(var(--bc))];
   --notion-max-width: 100%;
+  font-family: Palatino, "Palatino Linotype", Georgia, serif;
 }
 
 .notion-table-of-contents-item,
@@ -123,13 +124,18 @@
 .notion-h1,
 .notion-h2,
 .notion-h3 {
-  @apply font-serif-display !w-full;
+  @apply !w-full;
+  font-family:
+    var(--font-cormorant), Palatino, "Palatino Linotype", Georgia, serif;
 }
 
-.notion-table-of-contents,
+.notion-table-of-contents {
+  @apply !w-full;
+}
+
 .notion-list,
 .notion-text {
-  @apply font-sans-display !w-full;
+  @apply !w-full;
 }
 
 .notion-h1 {
@@ -147,7 +153,7 @@
 }
 
 .notion-asset-caption {
-  @apply font-sans-display text-center;
+  @apply text-center;
 }
 
 .notion-callout {

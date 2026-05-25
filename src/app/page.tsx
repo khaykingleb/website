@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 
 import { Footer } from "@/components/footer";
 import { GradientOrb } from "@/components/gradient-orb";
@@ -54,8 +55,8 @@ export default function Home() {
         >
           <h1
             className={`
-              -ml-[0.06em] font-serif-display text-5xl leading-[0.95]
-              font-medium tracking-[-0.02em] text-balance
+              -ml-[0.05em] font-heading text-5xl leading-[0.85] font-medium
+              tracking-[-0.02em] text-balance
               sm:text-6xl
               md:text-7xl
               lg:text-8xl
@@ -67,19 +68,13 @@ export default function Home() {
           <nav
             aria-label="Primary"
             className={`
-              flex flex-wrap items-center gap-x-4 gap-y-2 font-sans-display
-              text-base text-base-content/70
-              sm:gap-x-5 sm:text-lg
+              flex flex-wrap items-center gap-x-2 gap-y-1.5 text-base
+              text-base-content/70
+              sm:gap-x-3 sm:text-lg
             `}
           >
             {links.map((link, index) => (
-              <span
-                key={link.href}
-                className={`
-                  flex items-center gap-x-4
-                  sm:gap-x-4
-                `}
-              >
+              <Fragment key={link.href}>
                 {index > 0 && (
                   <span aria-hidden="true" className="text-base-content/25">
                     /
@@ -95,7 +90,7 @@ export default function Home() {
                 >
                   {link.label}
                 </Link>
-              </span>
+              </Fragment>
             ))}
           </nav>
         </section>
