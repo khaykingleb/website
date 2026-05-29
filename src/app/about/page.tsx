@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     description: ABOUT_DESCRIPTION,
     type: "profile",
     url: "https://khaykingleb.com/about",
-    images: ["/avatar.webp"],
+    images: ["/the-ancient-of-days.jpg"],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "About — Gleb Khaykin",
     description: ABOUT_DESCRIPTION,
-    images: ["/avatar.webp"],
+    images: ["/the-ancient-of-days.jpg"],
   },
 };
 
