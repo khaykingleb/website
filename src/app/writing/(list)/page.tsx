@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     description: WRITING_DESCRIPTION,
     type: "website",
     url: "https://khaykingleb.com/writing",
-    images: ["/avatar.webp"],
+    images: ["/the-ancient-of-days.jpg"],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Writing — Gleb Khaykin",
     description: WRITING_DESCRIPTION,
-    images: ["/avatar.webp"],
+    images: ["/the-ancient-of-days.jpg"],
   },
 };
 

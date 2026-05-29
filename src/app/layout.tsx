@@ -15,6 +15,10 @@ const SITE_URL = "https://khaykingleb.com";
 const SITE_NAME = "Gleb Khaykin";
 const SITE_DESCRIPTION =
   "Platform engineer at Together AI in Amsterdam, working on distributed ML infrastructure. Writing about systems, GPUs, and the operational side of ML.";
+const LINK_PREVIEW_IMAGE = {
+  url: "/the-ancient-of-days.jpg",
+  alt: "The Ancient of Days by William Blake",
+};
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -129,16 +133,16 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
-    images: [{ url: "/avatar.webp", alt: SITE_NAME }],
+    images: [LINK_PREVIEW_IMAGE],
     locale: "en_US",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
     creator: "@khaykingleb",
     site: "@khaykingleb",
-    images: ["/avatar.webp"],
+    images: [LINK_PREVIEW_IMAGE],
   },
   icons: {
     icon: [

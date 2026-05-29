@@ -23,7 +23,7 @@ export const Avatar = () => {
         src="/avatar.webp"
         alt="Gleb Khaykin"
         fill
-        sizes="176px"
+        sizes="(min-width: 640px) 216px, 160px"
         className={`
           rounded-full object-cover
           ${
