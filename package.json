@@ -1,6 +1,6 @@
 {
   "name": "khaykingleb-com",
-  "version": "1.28.31",
+  "version": "1.28.32",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
