@@ -46,5 +46,6 @@ export default {
     "ngrok",
     "justfile",
     "atrule",
+    "ofetch",
   ],
 };

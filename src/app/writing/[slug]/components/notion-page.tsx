@@ -29,7 +29,12 @@ const slugify = (text: string) =>
  * @returns The Notion page record map.
  */
 async function fetchNotionPage(pageId: string) {
-  const notion = new NotionAPI();
+  const notion = new NotionAPI({
+    // TODO: Remove after https://github.com/khaykingleb/website/issues/85.
+    ofetchOptions: {
+      headers: { "User-Agent": "khaykingleb.com" },
+    },
+  });
   return notion.getPage(pageId);
 }
 
